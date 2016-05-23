@@ -13,7 +13,7 @@ public class UserOrder {
     }
 
     public UserOrder getOrder(){
-        return new Order;
+        return null;
     }
 
     public int getPlayer(){
