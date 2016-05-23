@@ -1,5 +1,7 @@
 package jpu2016.dogfight.model;
 
+import java.awt.*;
+
 /**
  * Created by Clément on 23/05/16.
  */
