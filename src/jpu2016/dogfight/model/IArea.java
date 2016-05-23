@@ -11,5 +11,6 @@ public interface IArea {
 
     public Image getImage (){
 
+        return null;
     }
 }

@@ -14,6 +14,7 @@ public class DogfightModel {
 
     public IArea getArea(){
 
+        return null;
     }
 
 
@@ -36,6 +37,7 @@ public class DogfightModel {
 
     public IMobile getMobileByPlayer(int player){
 
+        return null;
     }
 
     public void setMobilesHavesMoved(){
