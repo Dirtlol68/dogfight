@@ -1,4 +1,4 @@
-package DogfightController;
+package jpu2016.dogfight.controller;
 
 
 /**
