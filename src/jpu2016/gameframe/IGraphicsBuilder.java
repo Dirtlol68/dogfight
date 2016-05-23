@@ -13,10 +13,10 @@ public class IGraphicsBuilder {
     }
 
     public int getGlobalWidth(){
-        return GlobalWidth;
+        return 1;
     }
 
     public int getGlobalHeight(){
-        return GlobalHeight;
+        return 1;
     }
 }
