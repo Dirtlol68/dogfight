@@ -7,7 +7,7 @@ import java.awt.*;
  */
 public interface IDogfightModel {
 
-    public Model.IArea getImage() ;
+    public Model.IArea getArea() ;
     public void buildArea(Dimension dimension);
     public void addMobile (IMobile mobile);
     public void removeMobile (IMobile mobile);
