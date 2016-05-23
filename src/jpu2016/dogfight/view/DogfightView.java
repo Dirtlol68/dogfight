@@ -17,9 +17,9 @@ public class DogfightView {
     private void run(){
 
     }
-    public String displayMessage(){
+    public String displayMessage(String message){
 
-        return "Fail";
+        return "ok";
     }
 
     public void closeAll(){
