@@ -9,8 +9,6 @@ import java.awt.image.ImageObserver;
  * Created by Ahmed on 23/05/2016.
  */
 public class GraphicsBuilder {
-    public int GlobalWidth;
-    public int GlobalHeight;
 
     public GraphicsBuilder(IDogfightModel dogfightModel){
 
@@ -29,11 +27,11 @@ public class GraphicsBuilder {
     }
 
     public int getGlobalWidth() {
-        return GlobalWidth;
+        return 1;
     }
 
     public int getGlobalHeight() {
-        return GlobalHeight;
+        return 1;
     }
 
 }
