@@ -9,9 +9,14 @@ import java.util.Observable;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GameFrame implements KeyListener{
+public class GameFrame extends JFrame implements KeyListener{
+
+    private IEventPerformer eventPerformer;
 
     public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicsBuilder, Observable observable){
+
+        JFrame jFrame = new JFrame(title);
+
 
     }
 
@@ -21,7 +26,7 @@ public class GameFrame implements KeyListener{
     }
 
     @Override
-    public void keyPressed(KeyEvent e) {
+    public void keyPressed(KeyEvent keyEvent) {
 
     }
 

@@ -8,7 +8,7 @@ import java.util.Observer;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GamePanel implements Observer {
+public class GamePanel extends JPanel implements Observer {
 
     public GamePanel(IGraphicsBuilder graphicsBuilder){
 
