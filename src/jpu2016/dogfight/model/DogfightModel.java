@@ -7,6 +7,9 @@ import java.util.ArrayList;
  */
 public class DogfightModel implements IDogfightModel{
 
+
+    private Mobile mobiles;
+
     public DogfightModel (){
 
 
@@ -35,6 +38,7 @@ public class DogfightModel implements IDogfightModel{
 
     @Override
     public ArrayList<IMobile> getMobiles() {
+
         return null;
     }
 
