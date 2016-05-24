@@ -1,5 +1,6 @@
 package jpu2016.gameframe;
 
+import javax.swing.JPanel;
 import java.awt.*;
 import java.util.Observable;
 import java.util.Observer;
