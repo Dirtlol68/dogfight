@@ -1,5 +1,7 @@
 package jpu2016.gameframe;
 
+import jpu2016.dogfight.view.EventPerformer;
+
 import javax.swing.JFrame;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -27,7 +29,7 @@ public class GameFrame extends JFrame implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-
+        eventPerformer = new EventPerformer(keyEvent, );
     }
 
     @Override
