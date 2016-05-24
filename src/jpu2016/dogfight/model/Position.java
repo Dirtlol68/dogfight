@@ -13,10 +13,19 @@ public class Position {
 
     public Position(double x, double y, double maxX, double maxY){
 
+        this.x = x;
+        this.y = y;
+        this.maxX = maxX;
+        this.maxY = maxX;
 
     }
 
     public Position (Position position){
+
+       this.x = position.getX();
+        this.y = position.getX();
+        this.maxX = position.getX();
+        this.maxY = position.getX();
 
     }
 
