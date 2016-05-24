@@ -67,7 +67,20 @@ public class Mobile implements IMobile {
 
     @Override
     public void move() {
-
+        switch (this.getDirection()){
+            case UP:
+                this.moveUp();
+                break;
+            case DOWN:
+                this.moveDown();
+                break;
+            case RIGHT:
+                this.moveRight();
+                break;
+            case LEFT:
+                this.moveLeft();
+                break;
+        }
     }
 
     @Override
@@ -110,19 +123,19 @@ vont se promener un peu n’importe où.
     }
 
     private void moveUp(){
-
+        this.position.setY(this.getPosition().getY() - 1);
     }
 
     private void moveRight(){
-
+        this.position.setX(this.getPosition().getX() + 1);
     }
 
     private void moveDown(){
-
+        this.position.setY(this.getPosition().getY() + 1);
     }
 
     private void moveLeft(){
-
+        this.position.setX(this.getPosition().getX() + 1);
     }
 
     public Color getColor(){

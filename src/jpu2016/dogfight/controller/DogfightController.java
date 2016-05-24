@@ -4,6 +4,7 @@ import jpu2016.dogfight.model.*;
 import jpu2016.dogfight.view.IViewSystem;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  * Created by arno on 23/05/16.
@@ -31,7 +32,7 @@ public class DogfightController implements IOrderPerformer{
                 launchMissile(userOrder.getPlayer());
                 break;
             case UP:
-               
+
                 break;
             case DOWN:
                 break;
@@ -103,8 +104,22 @@ public class DogfightController implements IOrderPerformer{
     mobiles présents.
      */
     private void gameLoop(){
+        ArrayList<IMobile> mobiles = new ArrayList<IMobile>();
+        IMobile actualMobile;
+        while((dogfightModel.getMobileByPlayer(1)) != null && (dogfightModel.getMobileByPlayer(2) != null)){
+            mobiles = dogfightModel.getMobiles();
+            for(int i = 0; mobiles.size() > i; i++){
+                actualMobile = (IMobile) mobiles.toArray()[i];
+                actualMobile.move();
+            }
+
+
+            launchMissile(1);
+
+            manageCollision();
+        }
         launchMissile(1);
-        manageCollision();
+
     }
 
     /*

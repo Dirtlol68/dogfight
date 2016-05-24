@@ -42,6 +42,7 @@ public class Missile extends Mobile {
     @Override
     public void move() {
         super.move();
+        this.distanceTraveled++;
     }
 
     @Override
