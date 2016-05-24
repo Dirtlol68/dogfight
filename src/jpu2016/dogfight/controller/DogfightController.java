@@ -25,6 +25,23 @@ public class DogfightController implements IOrderPerformer{
      */
     @Override
     public void orderPerform(UserOrder userOrder){
+        IMobile plane = dogfightModel.getMobileByPlayer(userOrder.getPlayer());
+        switch (userOrder.getOrder()){
+            case SHOOT:
+                launchMissile(userOrder.getPlayer());
+                break;
+            case UP:
+                plane.m
+                break;
+            case DOWN:
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
+            case NOP:
+                break;
+        }
 
     }
 
@@ -130,11 +147,10 @@ public class DogfightController implements IOrderPerformer{
             mobile= (Mobile) weapon.toArray()[i];
             if(mobile.isWeapon())
             {
-                System.out.println("C'est une arme !");
                 if(isWeaponOnMobile(plane1,mobile))
-                    System.out.println("BOOM1");
+                    weapon.remove(mobile);
                 if(isWeaponOnMobile(plane2,mobile))
-                     System.out.println("BOOM2");
+                     weapon.remove(mobile);
             }
         }
 
