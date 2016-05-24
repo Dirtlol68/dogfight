@@ -9,7 +9,7 @@ import java.util.Observable;
  */
 public class GameFrame implements KeyListener{
 
-  //  GamePanel gamePanel = new GamePanel();
+    //GamePanel gamePanel = new GamePanel();
 
     public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicsBuilder, Observable observable){
 
