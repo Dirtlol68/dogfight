@@ -20,14 +20,17 @@ public class EventPerformer implements IEventPerformer{
     }
 
     private UserOrder keyCodeToUserOrder(int keyCode){
+        UserOrder userOrder;
+        Order order = Order.DOWN;
 
-    }
-
-    @Override
-    public void eventPerform(KeyEvent keyCode) {
-        switch (keyCode.getKeyCode()){
-            case KeyEvent.VK_Z :
+        switch (new Order) {
+            case UP:
+                new Order();
                 new UserOrder(1, Order.UP);
+        }
+        switch (keyCode){
+            case KeyEvent.VK_Z :
+                new UserOrder(1,  );
                 break;
             case KeyEvent.VK_Q :
                 new UserOrder(1, Order.LEFT);
@@ -57,6 +60,12 @@ public class EventPerformer implements IEventPerformer{
                 new UserOrder(2, Order.SHOOT);
                 break;
         }
+        return
+    }
+
+    @Override
+    public void eventPerform(KeyEvent keyCode) {
+
         return null;
     }
 }
