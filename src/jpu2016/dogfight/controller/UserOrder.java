@@ -7,6 +7,7 @@ package jpu2016.dogfight.controller;
 public class UserOrder implements  IUserOrder{
 
     private int player;
+    protected Order order;/*?????*/
 
     public void UserOrder(){
 
@@ -14,7 +15,7 @@ public class UserOrder implements  IUserOrder{
 
     @Override
     public Order getOrder() {
-        return null;
+        return order;/*??????*/
     }
 
     @Override
