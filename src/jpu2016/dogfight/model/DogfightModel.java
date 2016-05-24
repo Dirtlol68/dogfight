@@ -39,11 +39,13 @@ public class DogfightModel extends Observable implements IDogfightModel{
     public void removeMobile(IMobile mobile) {
 
     }
-
+    /*
+    Du coup getMobiles() est fait aussi et getMobileByPlayer
+     */
     @Override
     public ArrayList<IMobile> getMobiles() {
 
-        return null;
+        return mobiles;
     }
 
     @Override
