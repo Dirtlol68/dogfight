@@ -7,71 +7,33 @@ import java.awt.*;
  */
 public interface IMobile {
 
-    public Direction getDirection(){
-
-        return null;
-    }
+    public Direction getDirection();
 
 
-    public void setDirection(Direction direction){
+    public void setDirection(Direction direction);
 
-    }
+    public Point getPosition();
 
-    public Point getPosition(){
+    public Dimension getDimension();
 
-        return null;
-    }
+    public int getWidth();
 
-    public Dimension getDimension(){
+    public int getHeight();
 
-        return null;
-    }
+    public int getSpeed();
 
-    public int getWidth(){
+    public Image getImage();
 
-        return 1;
-    }
+    public void move();
 
-    public int getHeight(){
+    public void placeInArea(IArea area);
 
-        return 1;
-    }
+    public boolean isPlayer(int player);
 
-    public int getSpeed(){
+    public void setDogfightModel(DogfightModel dogfightModel);
 
-        return 1;
-    }
+    public boolean hit();
 
-    public Image getImage(){
-
-        return null;
-    }
-
-    public void move(){
-
-    }
-
-    public void placeInArea(IArea area){
-
-    }
-
-    public boolean isPlayer(int player){
-
-        return true;
-    }
-
-    public void setDogfightModel(DogfightModel dogfightModel){
-
-    }
-
-    public boolean hit(){
-
-        return true;
-    }
-
-    public boolean isWeapon(){
-
-        return true;
-    }
+    public boolean isWeapon();
 
 }
