@@ -12,6 +12,7 @@ public class Mobile implements IMobile {
     private Dimension dimension1;
     private DogfightModel dogfightModel;
     private Direction direction;
+    private Image image4;
 
 
     public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {

@@ -1,13 +1,14 @@
 package jpu2016.dogfight.model;
 
 import java.util.ArrayList;
+import java.util.Observable;
 
 /**
  * Created by Clemsouille on 23/05/2016.
  */
-public class DogfightModel implements IDogfightModel{
+public class DogfightModel extends Observable implements IDogfightModel{
 
-
+    private Sky sky;
     private Mobile mobiles;
 
     public DogfightModel (){
