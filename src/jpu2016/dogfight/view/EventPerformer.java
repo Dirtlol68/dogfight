@@ -11,30 +11,7 @@ import java.awt.event.KeyEvent;
  */
 public class EventPerformer implements IEventPerformer{
 
-    protected DogfightView dogfightView;
-    protected IOrderPerformer orderPerformer;
-
-    public IOrderPerformer getOrderPerformer() {
-        return orderPerformer;
-    }
-
-    public void setOrderPerformer(IOrderPerformer orderPerformer) {
-        this.orderPerformer = orderPerformer;
-        orderPerformer. //getter setter dans IOrderPerformer
-    }
-
-    UserOrder userOrderEP = new UserOrder();
-
-    public DogfightView getDogfightView() {
-        return dogfightView;
-    }
-
-    public void setDogfightView(DogfightView dogfightView) {
-        this.dogfightView = dogfightView;
-    }
-
-    UserOrder userOrder = new UserOrder();
-
+    private IOrderPerformer orderPerformer;
 
     public EventPerformer(IOrderPerformer orderPerformer){
 
