@@ -6,17 +6,11 @@ import java.awt.image.ImageObserver;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class IGraphicsBuilder {
+public interface IGraphicsBuilder {
 
-    public void applyModelToGraphic(Graphics graphics, ImageObserver observer){
+    public void applyModelToGraphic(Graphics graphics, ImageObserver observer);
 
-    }
+    public int getGlobalWidth();
 
-    public int getGlobalWidth(){
-        return 1;
-    }
-
-    public int getGlobalHeight(){
-        return 1;
-    }
+    public int getGlobalHeight();
 }

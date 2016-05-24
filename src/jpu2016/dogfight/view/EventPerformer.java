@@ -9,7 +9,17 @@ import java.awt.event.KeyEvent;
  * Created by Ahmed on 23/05/2016.
  */
 public class EventPerformer {
+    protected DogfightView dogfightView;
 
+    public DogfightView getDogfightView() {
+        return dogfightView;
+    }
+
+    public void setDogfightView(DogfightView dogfightView) {
+        this.dogfightView = dogfightView;
+    }
+
+    UserOrder userOrder = new UserOrder();
     public EventPerformer(IOrderPerformer orderPerformer){
 
     }
