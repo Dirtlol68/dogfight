@@ -13,17 +13,21 @@ public class Main {
     sa boucle d’affichage commencé par la fin et mobiles.
      */
     public static void main(String[] args) {
-        final DogfightModel dogfightModel = new DogfightModel();
-        final DogfightController dogfightController = new DogfightController(dogfightModel);
-        final DogfightView dogfightView = new DogfightView(dogfightController, dogfightModel,
-                dogfightModel);
-        dogfightController.setViewSystem(dogfightView);
-        dogfightController.play();
         int HEIGHT = 600, WIDTH = 600;
         Sky sky = new Sky(new Dimension(HEIGHT,WIDTH));
         Cloud cloud1 = new Cloud(Direction.UP, new Position(200,200,HEIGHT,WIDTH));
         Plane plane1 = new Plane(1, Direction.RIGHT, new Position(100,100,HEIGHT,WIDTH), "Zero_RIGHT");
         Plane plane2 = new Plane(2, Direction.LEFT, new Position(500,100,HEIGHT,WIDTH), "F4U_RIGHT");
         Cloud cloud2 = new Cloud(Direction.UP, new Position(400,400, HEIGHT,WIDTH));
+
+
+
+
+        final DogfightModel dogfightModel = new DogfightModel();
+        final DogfightController dogfightController = new DogfightController(dogfightModel);
+        final DogfightView dogfightView = new DogfightView(dogfightController, dogfightModel,
+                dogfightModel);
+        dogfightController.setViewSystem(dogfightView);
+        dogfightController.play();
     }
 }
