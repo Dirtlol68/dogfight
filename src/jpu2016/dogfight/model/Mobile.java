@@ -46,12 +46,12 @@ public class Mobile implements IMobile {
 
     @Override
     public int getWidth() {
-        return 0;
+        return getDimension().getWidth();
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return getDimension().getWidth();
     }
 
     @Override
