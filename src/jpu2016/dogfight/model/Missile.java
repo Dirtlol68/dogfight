@@ -24,12 +24,18 @@ public class Missile extends Mobile {
 
     public static int getHeightADirection(Direction direction){
 
-        return HEIGHT;
+        if (direction == Direction.UP || direction == Direction.DOWN)
+            return WIDTH;
+        else
+            return HEIGHT;
     }
 
     public static int getWidthADirection(Direction direction){
 
-        return WIDTH;
+        if (direction == Direction.UP || direction == Direction.DOWN)
+            return HEIGHT;
+        else
+            return WIDTH;
     }
 
    //rajouter deux méthodes static
