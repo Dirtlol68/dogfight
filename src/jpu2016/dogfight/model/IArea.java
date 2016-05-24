@@ -7,13 +7,6 @@ import java.awt.Image;
  */
 public interface IArea {
 
-    public Dimension getDimension(){
-
-        return null;
-    }
-
-    public default Image getImage(){
-
-        return null;
-    }
+    public Dimension getDimension();
+    public Image getImage();
 }

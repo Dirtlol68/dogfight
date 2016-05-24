@@ -11,6 +11,14 @@ public class Position {
     private double maxY ;
 
 
+    public Position(double x, double y, double maxX, double maxY){
+
+
+    }
+
+    public Position (Position position){
+
+    }
 
     public double getX() {
         return x;

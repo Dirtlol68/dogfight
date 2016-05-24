@@ -8,6 +8,8 @@ import java.awt.*;
 public class Sky implements IArea{
 
 
+    private Dimension dimension ;
+
     @Override
     public Dimension getDimension() {
         return null;
