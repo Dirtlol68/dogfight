@@ -16,10 +16,20 @@ public class Missile extends Mobile {
 
 
     public Missile(Direction direction, Dimension dimension) {
-
+        super(direction, new Position(0,0,0,0), dimension, SPEED, IMAGE);
 
     }
 
+
+    public static int getHeightADirection(Direction direction){
+
+        return 1;
+    }
+
+    public static int getWidthADirection(Direction direction){
+
+        return 1;
+    }
 
    //rajouter deux méthodes static
     @Override

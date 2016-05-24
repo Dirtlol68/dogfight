@@ -15,6 +15,7 @@ public class Cloud extends Mobile {
 
 
     public Cloud(Direction direction, Position position) {
+        super(direction, new Position(0,0,0,0), new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 
     }
 
