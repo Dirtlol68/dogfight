@@ -31,7 +31,7 @@ public class DogfightController implements IOrderPerformer{
                 launchMissile(userOrder.getPlayer());
                 break;
             case UP:
-                plane.m
+               
                 break;
             case DOWN:
                 break;
@@ -150,10 +150,12 @@ public class DogfightController implements IOrderPerformer{
                 if(isWeaponOnMobile(plane1,mobile)) {
                     weapon.remove(mobile);
                     plane1.hit();
+                    weapon.remove(plane1);
                 }
                 if(isWeaponOnMobile(plane2,mobile)) {
                     weapon.remove(mobile);
                     plane2.hit();
+                    weapon.remove(plane2);
                 }
             }
         }
