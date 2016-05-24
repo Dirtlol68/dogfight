@@ -18,10 +18,14 @@ public class Plane extends Mobile{
         this.player = player;
     }
 
-
+    /*
+    Au cas ou isPlayer c'est fait ;)
+     */
     @Override
     public boolean isPlayer(int player) {
-        return super.isPlayer(player);
+        if(this.player == player)
+            return true;
+        return false;
     }
 
     @Override
