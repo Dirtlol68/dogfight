@@ -12,17 +12,9 @@ import java.awt.image.ImageObserver;
  * Created by Ahmed on 23/05/2016.
  */
 public class GraphicsBuilder implements IGraphicsBuilder {
-    protected DogfightView dogfightView;
-    protected IDogfightModel dogfightModel;
-    //protected BufferedImage bufferedImage;
 
-    public DogfightView getDogfightView() {
-        return dogfightView;
-    }
-
-    public void setDogfightView(DogfightView dogfightView) {
-        this.dogfightView = dogfightView;
-    }
+    private BufferedImage emptySky;
+    private IDogfightModel dogfightModel;
 
     public GraphicsBuilder(IDogfightModel dogfightModel){
 

@@ -10,24 +10,15 @@ import java.util.Observable;
  * Created by arno on 23/05/16.
  */
 public class DogfightView implements IViewSystem {
-    protected GameFrame gameFrame;
-    protected GraphicsBuilder graphicsBuilder;
-    protected EventPerformer eventPerformer;
+    private GameFrame gameFrame;
 
     public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable){
-        this.gameFrame = new GameFrame(); /**remplir**/
-        this.gameFrame.setDogfightView(this);
-        this.graphicsBuilder = new GraphicsBuilder(); /**remplir**/
-        this.graphicsBuilder.setDogfightView(this);
-        this.eventPerformer = new EventPerformer(); /**remplir**/
-        this.eventPerformer.setDogfightView(this);
 
     }
 
     private void run(){
 
     }
-
 
     @Override
     public String displayMessage(String message) {
