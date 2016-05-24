@@ -10,11 +10,14 @@ public class Mobile implements IMobile {
     private int speed ;
     private Position position;
     private Dimension dimension1;
+    private DogfightModel dogfightModel;
+    private Direction direction;
 
 
     public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
         this.speed = speed;
     }
+
 
     @Override
     public Direction getDirection() {
