@@ -103,4 +103,8 @@ public class Mobile implements IMobile {
 
     }
 
+    public Color getColor(){
+        return getColor();
+    }
+
 }
