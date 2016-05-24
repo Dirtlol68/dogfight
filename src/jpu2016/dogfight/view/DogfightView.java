@@ -9,16 +9,13 @@ import java.util.Observable;
 /**
  * Created by arno on 23/05/16.
  */
-public class DogfightView implements IViewSystem {
+public class DogfightView implements IViewSystem, Runnable {
     private GameFrame gameFrame;
 
     public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable){
 
     }
 
-    private void run(){
-
-    }
 
     @Override
     public String displayMessage(String message) {
@@ -27,6 +24,11 @@ public class DogfightView implements IViewSystem {
 
     @Override
     public void closeAll() {
+
+    }
+
+    @Override
+    public void run() {
 
     }
 }
