@@ -25,6 +25,23 @@ public class DogfightController implements IOrderPerformer{
      */
     @Override
     public void orderPerform(UserOrder userOrder){
+        IMobile plane = dogfightModel.getMobileByPlayer(userOrder.getPlayer());
+        switch (userOrder.getOrder()){
+            case SHOOT:
+                launchMissile(userOrder.getPlayer());
+                break;
+            case UP:
+                plane.m
+                break;
+            case DOWN:
+                break;
+            case RIGHT:
+                break;
+            case LEFT:
+                break;
+            case NOP:
+                break;
+        }
 
     }
 
@@ -50,29 +67,34 @@ public class DogfightController implements IOrderPerformer{
      */
     private void launchMissile (int player){
         IMobile plane = dogfightModel.getMobileByPlayer(player);
-
+        /*
+        Position de l'avion non pas par rapport au centre mais par rapport au coin haut gauche
+         */
         int x = 0, y = 0;
 
         if(plane.getDirection() == Direction.RIGHT) {
-            x = (int) (plane.getPosition().getX() + plane.getWidth() / 2 + Missile.getWidthADirection(Direction.RIGHT) / 2);
+            x = (int) (plane.getPosition().getX() + plane.getWidth()) + 1;
             y = (int) (plane.getPosition().getY());
         }
         else if(plane.getDirection() == Direction.LEFT){
-            x = (int) (plane.getPosition().getX() - plane.getWidth() / 2 - Missile.getWidthADirection(Direction.LEFT)/2);
+            x = (int) (plane.getPosition().getX() - Missile.getWidthADirection(Direction.LEFT)) - 1;
             y = (int) (plane.getPosition().getY());
+
         }
         else if(plane.getDirection() == Direction.UP){
             x = (int) (plane.getPosition().getX());
-            y = (int) (plane.getPosition().getY() + plane.getHeight() / 2 + Missile.getHeightADirection(Direction.UP)/2);
+            y = (int) (plane.getPosition().getY() + Missile.getHeightADirection(Direction.UP)) + 1;
         }
         else if(plane.getDirection() == Direction.DOWN){
             x = (int) (plane.getPosition().getX());
-            y = (int) (plane.getPosition().getY() - + plane.getHeight() / 2 - Missile.getHeightADirection(Direction.DOWN)/2);
+            y = (int) (plane.getPosition().getY() + plane.getHeight()) - 1;
         }
         else
             System.out.println("DogfightController - launchMisssile - ERROR : no direction find");
 
-        new Missile(plane.getDirection(), new Position(x,y, Missile.getWidthADirection(plane.getDirection()), Missile.getHeightADirection(plane.getDirection())));
+        //System.out.println("Coord missile : x:" + x + " y:" + y);
+        dogfightModel.addMobile(new Missile(plane.getDirection(), new Position(x,y, Missile.getWidthADirection(plane.getDirection()),
+                Missile.getHeightADirection(plane.getDirection()))));
     }
 
     /*
@@ -81,7 +103,8 @@ public class DogfightController implements IOrderPerformer{
     mobiles présents.
      */
     private void gameLoop(){
-
+        launchMissile(1);
+        manageCollision();
     }
 
     /*
@@ -112,6 +135,24 @@ public class DogfightController implements IOrderPerformer{
     l'avion en fonction du résultat.
      */
     private void manageCollision(){
+
+        IMobile plane1 = dogfightModel.getMobileByPlayer(1);
+        IMobile plane2 = dogfightModel.getMobileByPlayer(2);
+
+        ArrayList<IMobile> weapon = new ArrayList<IMobile>();
+        weapon = dogfightModel.getMobiles();
+
+        Mobile mobile;
+        for (int i =0; weapon.size() > i; i++){
+            mobile= (Mobile) weapon.toArray()[i];
+            if(mobile.isWeapon())
+            {
+                if(isWeaponOnMobile(plane1,mobile))
+                    weapon.remove(mobile);
+                if(isWeaponOnMobile(plane2,mobile))
+                     weapon.remove(mobile);
+            }
+        }
 
     }
 }

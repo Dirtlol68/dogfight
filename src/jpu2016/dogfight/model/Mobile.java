@@ -26,6 +26,7 @@ public class Mobile implements IMobile {
 
     @Override
     public Direction getDirection() {
+
         return this.direction;
     }
 
@@ -46,12 +47,12 @@ public class Mobile implements IMobile {
 
     @Override
     public int getWidth() {
-        return 0;
+        return getDimension().getWidth();
     }
 
     @Override
     public int getHeight() {
-        return 0;
+        return getDimension().getWidth();
     }
 
     @Override

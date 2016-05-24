@@ -51,9 +51,9 @@ public class DogfightModel extends Observable implements IDogfightModel{
     @Override
     public IMobile getMobileByPlayer(int player) {
         Plane plane;
-        for (int i = 0; mobiles.size() >= i;i++){//gérer la fin de la boucle
-            if(mobiles.toArray()[0].getClass().isInstance(new Plane(0, Direction.DOWN,new Position(0,0,0,0)  , "Test"))){
-                plane = (Plane) mobiles.toArray()[0];
+        for (int i = 0; mobiles.size() > i;i++){
+            if(mobiles.toArray()[i].getClass().isInstance(new Plane(0, Direction.DOWN,new Position(0,0,0,0)  , "Test"))){
+                plane = (Plane) mobiles.toArray()[i];
                 if(plane.isPlayer(player))
                     return plane;
             }
