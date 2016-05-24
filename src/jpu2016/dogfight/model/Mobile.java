@@ -84,6 +84,11 @@ public class Mobile implements IMobile {
         return getDogfightModel();
     }
 
+    /*
+    Dans la méthode setDogfightModel(), il ne faut pas oublier d’initialiser les attributs maxX et
+maxY de la position du mobile en récupérant celle du dogFightModel. Sans cela vos mobile
+vont se promener un peu n’importe où.
+     */
     @Override
     public void setDogfightModel(DogfightModel dogfightModel) {
 

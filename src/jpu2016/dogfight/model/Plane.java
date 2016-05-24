@@ -30,7 +30,7 @@ public class Plane extends Mobile{
 
     @Override
     public boolean hit() {
-        return super.hit();
+        return true;
     }
 
 
