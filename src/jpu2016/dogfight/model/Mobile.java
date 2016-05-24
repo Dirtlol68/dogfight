@@ -16,7 +16,11 @@ public class Mobile implements IMobile {
 
 
     public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
+        this.direction = direction;
+        this.position = position;
+        this.dimension1 = dimension;
         this.speed = speed;
+        //this.image4 = ;
     }
 
 
