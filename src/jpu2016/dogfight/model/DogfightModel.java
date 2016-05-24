@@ -9,7 +9,7 @@ import java.util.Observable;
 public class DogfightModel extends Observable implements IDogfightModel{
 
     private Sky sky;
-    private Mobile mobiles;
+    private ArrayList<IMobile> mobiles = new ArrayList<IMobile>(); //changement par Arno. Regarde '*' dans le diagramme tu instancie plusieurs
 
     public DogfightModel (){
 
@@ -30,7 +30,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
 
     @Override
     public void addMobile(IMobile mobile) {
-
+        this.mobiles.add(mobile);
     }
 
     @Override

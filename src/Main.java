@@ -24,6 +24,7 @@ public class Main {
 
 
         final DogfightModel dogfightModel = new DogfightModel();
+        dogfightModel.addMobile(plane1);
         final DogfightController dogfightController = new DogfightController(dogfightModel);
         final DogfightView dogfightView = new DogfightView(dogfightController, dogfightModel,
                 dogfightModel);
