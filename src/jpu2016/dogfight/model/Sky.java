@@ -12,6 +12,11 @@ public class Sky implements IArea{
     private DogfightModel dogfightModel;
     private Image image;
 
+    public Sky (Dimension dimension){
+
+        this.dimension = dimension;
+    }
+
     @Override
     public Dimension getDimension() {
         return null;
