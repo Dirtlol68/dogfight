@@ -147,10 +147,14 @@ public class DogfightController implements IOrderPerformer{
             mobile= (Mobile) weapon.toArray()[i];
             if(mobile.isWeapon())
             {
-                if(isWeaponOnMobile(plane1,mobile))
+                if(isWeaponOnMobile(plane1,mobile)) {
                     weapon.remove(mobile);
-                if(isWeaponOnMobile(plane2,mobile))
-                     weapon.remove(mobile);
+                    plane1.hit();
+                }
+                if(isWeaponOnMobile(plane2,mobile)) {
+                    weapon.remove(mobile);
+                    plane2.hit();
+                }
             }
         }
 
