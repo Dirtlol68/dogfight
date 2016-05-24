@@ -26,6 +26,7 @@ public class Mobile implements IMobile {
 
     @Override
     public Direction getDirection() {
+
         return this.direction;
     }
 
