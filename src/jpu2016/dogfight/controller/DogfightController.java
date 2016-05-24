@@ -190,7 +190,7 @@ public class DogfightController implements IOrderPerformer{
         IMobile plane1 = dogfightModel.getMobileByPlayer(1);
         IMobile plane2 = dogfightModel.getMobileByPlayer(2);
 
-        ArrayList<IMobile> weapon = new ArrayList<IMobile>();
+        ArrayList<IMobile> weapon;
         weapon = dogfightModel.getMobiles();
 
         Mobile mobile;
