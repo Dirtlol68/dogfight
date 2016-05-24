@@ -8,7 +8,7 @@ import java.util.Observable;
 /**
  * Created by arno on 23/05/16.
  */
-public class DogfightView {
+public class DogfightView implements IViewSystem {
 
     public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable){
 
@@ -17,13 +17,15 @@ public class DogfightView {
     private void run(){
 
     }
-    public String displayMessage(String message){
 
-        return "ok";
+
+    @Override
+    public String displayMessage(String message) {
+        return null;
     }
 
-    public void closeAll(){
+    @Override
+    public void closeAll() {
 
     }
-
 }
