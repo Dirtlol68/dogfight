@@ -5,40 +5,41 @@ import java.util.ArrayList;
 /**
  * Created by Clemsouille on 23/05/2016.
  */
-public class DogfightModel {
-
-    public DogfightModel (){
+public class DogfightModel implements IDogfightModel{
 
 
-    }
-
-    public IArea getArea(){
-
-    }
-
-
-    public void buildArea (Dimension dimension){
-
-    }
-
-    public void addMobile  (IMobile mobile){
-
-    }
-
-    public void removeMobile (Mobile mobile){
-
-    }
-
-    public ArrayList<IMobile> getMobiles(){
-
+    @Override
+    public IArea getArea() {
         return null;
     }
 
-    public IMobile getMobileByPlayer(int player){
+    @Override
+    public void buildArea(Dimension dimension) {
 
     }
 
-    public void setMobilesHavesMoved(){
+    @Override
+    public void addMobile(IMobile mobile) {
+
+    }
+
+    @Override
+    public void removeMobile(IMobile mobile) {
+
+    }
+
+    @Override
+    public ArrayList<IMobile> getMobiles() {
+        return null;
+    }
+
+    @Override
+    public IMobile getMobileByPlayer(int player) {
+        return null;
+    }
+
+    @Override
+    public void setMobilesHavesMoved() {
 
     }
 }
