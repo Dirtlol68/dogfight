@@ -6,7 +6,9 @@ import java.util.Observable;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GameFrame implements IEventPerformer{
+public class GameFrame{
+
+  //  GamePanel gamePanel = new GamePanel();
 
     public GameFrame(String title, IEventPerformer performer, IGraphicsBuilder graphicsBuilder, Observable observable){
 
@@ -21,11 +23,6 @@ public class GameFrame implements IEventPerformer{
     }
 
     public void keyTyped(KeyEvent keyEvent){
-
-    }
-
-    @Override
-    public void eventPerform() {
 
     }
 }

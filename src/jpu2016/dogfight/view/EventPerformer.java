@@ -10,6 +10,7 @@ import java.awt.event.KeyEvent;
  */
 public class EventPerformer {
 
+    UserOrder userOrder = new UserOrder();
     public EventPerformer(IOrderPerformer orderPerformer){
 
     }
