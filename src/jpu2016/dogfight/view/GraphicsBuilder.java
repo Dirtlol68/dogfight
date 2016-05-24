@@ -2,8 +2,11 @@ package jpu2016.dogfight.view;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
+import jpu2016.gameframe.IGraphicsBuilder;
+
 import java.awt.*;
 import java.awt.image.ImageObserver;
+import jpu2016.gameframe.IGraphicsBuilder;
 
 /**
  * Created by Ahmed on 23/05/2016.

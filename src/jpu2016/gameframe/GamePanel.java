@@ -6,7 +6,7 @@ import java.util.Observable;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GamePanel {
+public class GamePanel extends IGraphicsBuilder {
 
     public GamePanel(IGraphicsBuilder graphicsBuilder){
 
