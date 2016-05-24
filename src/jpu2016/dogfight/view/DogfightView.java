@@ -11,6 +11,7 @@ import java.util.Observable;
  */
 public class DogfightView implements IViewSystem, Runnable {
     private GameFrame gameFrame;
+    private EventPerformer eventPerformer;
 
     public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable){
 
