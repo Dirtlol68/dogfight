@@ -93,8 +93,13 @@ public class Mobile implements IMobile {
         return false;
     }
 
+    /*
+    isWeapon fonctionne !!
+     */
     @Override
     public boolean isWeapon() {
+        if(this.getClass().isInstance(new Missile(Direction.UP, new Position(0,0,0,0))))
+            return true;
         return false;
     }
 
