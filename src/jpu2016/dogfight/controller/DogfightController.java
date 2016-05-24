@@ -54,6 +54,7 @@ public class DogfightController implements IOrderPerformer{
         Position de l'avion non pas par rapport au centre mais par rapport au coin haut gauche
          */
         int x = 0, y = 0;
+
         if(plane.getDirection() == Direction.RIGHT) {
             x = (int) (plane.getPosition().getX() + plane.getWidth()) + 1;
             y = (int) (plane.getPosition().getY());
@@ -61,6 +62,7 @@ public class DogfightController implements IOrderPerformer{
         else if(plane.getDirection() == Direction.LEFT){
             x = (int) (plane.getPosition().getX() - Missile.getWidthADirection(Direction.LEFT)) - 1;
             y = (int) (plane.getPosition().getY());
+
         }
         else if(plane.getDirection() == Direction.UP){
             x = (int) (plane.getPosition().getX());
@@ -73,6 +75,7 @@ public class DogfightController implements IOrderPerformer{
         else
             System.out.println("DogfightController - launchMisssile - ERROR : no direction find");
 
+        //System.out.println("Coord missile : x:" + x + " y:" + y);
         dogfightModel.addMobile(new Missile(plane.getDirection(), new Position(x,y, Missile.getWidthADirection(plane.getDirection()),
                 Missile.getHeightADirection(plane.getDirection()))));
     }
@@ -122,19 +125,18 @@ public class DogfightController implements IOrderPerformer{
         ArrayList<IMobile> weapon = new ArrayList<IMobile>();
         weapon = dogfightModel.getMobiles();
 
-        Mobile mobile = (Mobile) weapon.toArray()[1];
-        if(mobile.isWeapon())
-        {
-            System.out.println("C'est une arme !");
-            if(isWeaponOnMobile(plane1,mobile))
-                System.out.println("BOOM");
-            //isWeaponOnMobile(plane2,mobile);
+        Mobile mobile;
+        for (int i =0; weapon.size() > i; i++){
+            mobile= (Mobile) weapon.toArray()[i];
+            if(mobile.isWeapon())
+            {
+                System.out.println("C'est une arme !");
+                if(isWeaponOnMobile(plane1,mobile))
+                    System.out.println("BOOM1");
+                if(isWeaponOnMobile(plane2,mobile))
+                     System.out.println("BOOM2");
+            }
         }
-        /*if(weapon.toArray()[1].getClass().isInstance(new Missile(Direction.UP, new Position(0,0,0,0)))){
-            System.out.println("Coucou");
-
-        }*/
-
 
     }
 }
