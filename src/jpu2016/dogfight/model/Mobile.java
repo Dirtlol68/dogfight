@@ -68,6 +68,10 @@ public class Mobile implements IMobile {
         return false;
     }
 
+    public IDogfightModel getDogfightModel(){
+        return getDogfightModel();
+    }
+
     @Override
     public void setDogfightModel(DogfightModel dogfightModel) {
 
@@ -82,4 +86,21 @@ public class Mobile implements IMobile {
     public boolean isWeapon() {
         return false;
     }
+
+    private void moveUp(){
+
+    }
+
+    private void moveRight(){
+
+    }
+
+    private void moveDown(){
+
+    }
+
+    private void moveLeft(){
+
+    }
+
 }
