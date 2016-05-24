@@ -38,7 +38,13 @@ public class Position {
     }
 
     public void setX(double x) {
-        this.x = x;
+        if(x > this.maxX)
+            this.x = 0;
+        else if (x < 0)
+            this.x = maxX;
+        else
+            this.x = x;
+
     }
 
     public void setY(double y) {
