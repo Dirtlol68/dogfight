@@ -6,21 +6,15 @@ import jpu2016.gameframe.IGraphicsBuilder;
 
 import java.awt.*;
 import java.awt.image.ImageObserver;
-import jpu2016.gameframe.IGraphicsBuilder;
 
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GraphicsBuilder {
+public class GraphicsBuilder implements IGraphicsBuilder {
 
     public GraphicsBuilder(IDogfightModel dogfightModel){
 
     }
-
-    public void applyModelToGraphic(Graphics graphics, ImageObserver observer){
-
-    }
-
     private void buildEmptySky(){
 
     }
@@ -29,12 +23,18 @@ public class GraphicsBuilder {
 
     }
 
+    @Override
+    public void applyModelToGraphic(Graphics graphics, ImageObserver observer) {
+
+    }
+
+    @Override
     public int getGlobalWidth() {
-        return 1;
+        return 0;
     }
 
+    @Override
     public int getGlobalHeight() {
-        return 1;
+        return 0;
     }
-
 }

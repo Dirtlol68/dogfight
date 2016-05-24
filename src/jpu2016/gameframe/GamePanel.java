@@ -2,22 +2,23 @@ package jpu2016.gameframe;
 
 import java.awt.*;
 import java.util.Observable;
+import java.util.Observer;
 
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GamePanel extends IGraphicsBuilder {
+public class GamePanel implements Observer {
 
     public GamePanel(IGraphicsBuilder graphicsBuilder){
 
     }
 
-    public Observable update(Observable observable){
+    public void paintComponent(Graphics graphics){
 
-        return observable;
     }
 
-    public void paintComponent(Graphics graphics){
+    @Override
+    public void update(Observable o, Object arg) {
 
     }
 }

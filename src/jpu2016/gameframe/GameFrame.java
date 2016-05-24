@@ -1,12 +1,13 @@
 package jpu2016.gameframe;
 
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.Observable;
 
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GameFrame{
+public class GameFrame implements KeyListener{
 
   //  GamePanel gamePanel = new GamePanel();
 
@@ -14,15 +15,18 @@ public class GameFrame{
 
     }
 
-    public void keyPressed(KeyEvent keyEvent){
+    @Override
+    public void keyTyped(KeyEvent e) {
 
     }
 
-    public void keyReleased(KeyEvent keyEvent){
+    @Override
+    public void keyPressed(KeyEvent e) {
 
     }
 
-    public void keyTyped(KeyEvent keyEvent){
+    @Override
+    public void keyReleased(KeyEvent e) {
 
     }
 }
