@@ -33,9 +33,12 @@ public class DogfightController implements IOrderPerformer{
     IViewSystem fournie par la vue de fin de partie.
      */
     public void play(){
-
+        gameLoop();
+        System.out.println("Fin de partie"); // A afficher sur l'écran.
     }
-
+    /*
+    Permet à la méthode play d'afficher un message de fin de partie.
+     */
     public void setViewSystem(IViewSystem viewSystem){
 
     }
@@ -86,7 +89,20 @@ public class DogfightController implements IOrderPerformer{
     collision avec un missile(weapon).
      */
     private boolean isWeaponOnMobile(final IMobile mobile, final IMobile weapon){
-
+        /*
+        weapon.x/weapon.wi >= mobile.x/mobile.wi
+         */
+        if (((weapon.getPosition().getX() / weapon.getWidth()) >= (mobile.getPosition().getX() /
+                weapon.getWidth()))
+                && ((weapon.getPosition().getX() / weapon.getWidth()) <=
+                ((mobile.getPosition().getX() + mobile.getWidth()) / weapon.getWidth()))) {
+            if (((weapon.getPosition().getY() / weapon.getHeight()) >= (mobile.getPosition().getY()
+                    / weapon.getHeight()))
+                    && ((weapon.getPosition().getY() / weapon.getHeight()) <=
+                    ((mobile.getPosition().getY() + mobile.getHeight()) / weapon.getHeight()))) {
+                return true;
+            }
+        }
         return false;
     }
 
