@@ -5,7 +5,8 @@ import java.awt.*;
 /**
  * Created by Clemsouille on 23/05/2016.
  */
-public class Cloud extends Mobile {
+public class
+Cloud extends Mobile {
 
 
     private static int SPEED  = 4;

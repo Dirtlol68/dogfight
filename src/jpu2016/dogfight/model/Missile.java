@@ -15,20 +15,21 @@ public class Missile extends Mobile {
     private int distanceTraveled = 0;
 
 
-    public Missile(Direction direction, Dimension dimension) {
-        super(direction, new Position(0,0,0,0), dimension, SPEED, IMAGE);
+    public Missile(Direction direction, Position Position) {
+        super(direction, Position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
+
 
     }
 
 
     public static int getHeightADirection(Direction direction){
 
-        return 1;
+        return HEIGHT;
     }
 
     public static int getWidthADirection(Direction direction){
 
-        return 1;
+        return WIDTH;
     }
 
    //rajouter deux méthodes static
