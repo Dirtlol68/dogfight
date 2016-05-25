@@ -137,7 +137,7 @@ vont se promener un peu n’importe où.
     }
 
     private void moveLeft(){
-        this.position.setX(this.getPosition().getX() + this.getSpeed());
+        this.position.setX(this.getPosition().getX() - this.getSpeed());
     }
 
     public Color getColor(){
