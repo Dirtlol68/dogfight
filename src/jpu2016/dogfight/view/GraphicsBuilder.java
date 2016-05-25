@@ -77,7 +77,6 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
         for(int i = 0; weapon.size() > i; i++){
             mobile = (Mobile) weapon.toArray()[i];
-            System.out.println(mobile);
             drawMobile(mobile, graphics,observer);
         }
     }

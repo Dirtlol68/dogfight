@@ -25,6 +25,7 @@ public class DogfightView implements IViewSystem, Runnable {
 
     @Override
     public String displayMessage(String message) {
+
         return null;
     }
 

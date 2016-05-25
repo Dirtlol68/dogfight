@@ -35,7 +35,6 @@ public class GameFrame extends JFrame implements KeyListener{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Hellloooo :");
     }
 
     /*public void setDogfightView(DogfightView dogfightView){

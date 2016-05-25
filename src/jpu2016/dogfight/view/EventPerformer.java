@@ -6,6 +6,7 @@ import jpu2016.dogfight.controller.UserOrder;
 import jpu2016.gameframe.IEventPerformer;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 /**
  * Created by Ahmed on 23/05/2016.
@@ -61,6 +62,13 @@ public class EventPerformer implements IEventPerformer{
 
     @Override
     public void eventPerform(KeyEvent keyCode) {
+
         UserOrder userOrder = keyCodeToUserOrder(keyCode.getKeyCode());
+        try {
+            System.out.println("ORDRE !");
+            this.orderPerformer.orderPerform(userOrder);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

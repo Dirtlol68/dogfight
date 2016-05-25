@@ -70,9 +70,7 @@ public class Mobile implements IMobile {
     public Image getImage() throws IOException {
         String Image = "";
         Image += this.Image + "_"+getDirection()+".png";
-        System.out.println("Chemin image : " + Image);
         this.image = ImageIO.read(new File(Image));
-        System.out.println("Coucou");
         return this.image;
     }
 
