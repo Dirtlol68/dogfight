@@ -30,6 +30,8 @@ public class Plane extends Mobile{
 
     @Override
     public boolean hit() {
+
+        getDogfightModel().removeMobile(this);
         return true;
     }
 
