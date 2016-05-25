@@ -29,6 +29,6 @@ public class GamePanel extends JPanel implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-        this.repaint();//???????
+        this.repaint();
     }
 }

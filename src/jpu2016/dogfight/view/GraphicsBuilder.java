@@ -72,15 +72,17 @@ public class GraphicsBuilder implements IGraphicsBuilder {
         graphicsMobile.drawImage(dogfightModel.getArea().getImage(), 0, 0, dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), observer);
         graphics.drawImage(imageMobile, 0, 0, observer);
 
-
         weapon = dogfightModel.getMobiles();
-
 
         for(int i = 0; weapon.size() > i; i++){
             mobile = (Mobile) weapon.toArray()[i];
             drawMobile(mobile, graphics,observer);
         }
+
+
+
     }
+
 
     @Override
     public int getGlobalWidth() {

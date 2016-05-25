@@ -21,13 +21,14 @@ public class Main {
         dogfightModel.buildArea(new Dimension(HEIGHT, WIDTH));
         dogfightModel.addMobile(new Cloud(Direction.UP, new Position(HEIGHT/4,WIDTH/4,HEIGHT,WIDTH)));
         dogfightModel.addMobile(new Plane(1, Direction.RIGHT, new Position(51,WIDTH*0.1,HEIGHT,WIDTH), "Zero"));
-        dogfightModel.addMobile(new Plane(2, Direction.LEFT, new Position(HEIGHT - 101,WIDTH*0.9,HEIGHT,WIDTH), "F4U"));
-        dogfightModel.addMobile(new Cloud(Direction.UP, new Position(HEIGHT*3/4,WIDTH*3/4, HEIGHT,WIDTH)));
+        dogfightModel.addMobile(new Plane(2, Direction.LEFT, new Position(HEIGHT - 101,WIDTH*0.8,HEIGHT,WIDTH), "F4U"));
+        dogfightModel.addMobile(new Cloud(Direction.RIGHT, new Position(HEIGHT*2.5/4,WIDTH*2.5/4, HEIGHT,WIDTH)));
 
         final DogfightController dogfightController = new DogfightController(dogfightModel);
         final DogfightView dogfightView = new DogfightView(dogfightController, dogfightModel,
                 dogfightModel);
         dogfightController.setViewSystem(dogfightView);
         dogfightController.play();
+
     }
 }

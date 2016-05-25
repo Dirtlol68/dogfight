@@ -57,13 +57,14 @@ public class DogfightController implements IOrderPerformer{
      */
     public void play() throws InterruptedException, IOException {
         gameLoop();
-        System.out.println("Fin de partie"); // A afficher sur l'écran.
+        viewSystem.displayMessage("GAME OVER");
+
     }
     /*
     Permet à la méthode play d'afficher un message de fin de partie.
      */
     public void setViewSystem(IViewSystem viewSystem){
-
+        this.viewSystem = viewSystem;
     }
 
     /*

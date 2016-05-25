@@ -3,7 +3,7 @@ package jpu2016.gameframe;
 import jpu2016.dogfight.view.DogfightView;
 import jpu2016.dogfight.view.EventPerformer;
 
-import javax.swing.JFrame;
+import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
@@ -24,17 +24,15 @@ public class GameFrame extends JFrame implements KeyListener{
         //this.setSize(getWidth(),getHeight());
         this.setTitle(title);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setResizable(true);
+        this.setResizable(false);
         this.setVisible(true);
         this.setSize(600, 600);
         GamePanel gamePanel = new GamePanel(graphicsBuilder);
+
         this.setContentPane(gamePanel);
+
         observable.addObserver(gamePanel);
-        try {
-            graphicsBuilder.applyModelToGraphic(getGraphics(), gamePanel);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+
         addKeyListener(this);
     }
 
