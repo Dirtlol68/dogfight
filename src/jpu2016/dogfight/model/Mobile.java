@@ -103,10 +103,10 @@ maxY de la position du mobile en récupérant celle du dogFightModel. Sans cela 
 vont se promener un peu n’importe où.
      */
     @Override
-    public void setDogfightModel(DogfightModel dogfightModel) {
+    public void setDogfightModel(IDogfightModel dogfightModel) {
 
-        position.setMaxX(800.00);
-        position.setMaxY(500.00);
+        position.setMaxX(600.00);
+        position.setMaxY(600.00);
     }
 
     @Override

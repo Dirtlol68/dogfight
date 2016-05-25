@@ -18,7 +18,14 @@ public interface IMobile {
     public void move();
     public void placeInArea(IArea area);
     public boolean isPlayer(int player);
-    public void setDogfightModel(DogfightModel dogfightModel);
+
+    /*
+    Dans la méthode setDogfightModel(), il ne faut pas oublier d’initialiser les attributs maxX et
+maxY de la position du mobile en récupérant celle du dogFightModel. Sans cela vos mobile
+vont se promener un peu n’importe où.
+     */
+    public void setDogfightModel(IDogfightModel dogfightModel);
+
     public boolean hit();
     public boolean isWeapon();
 
