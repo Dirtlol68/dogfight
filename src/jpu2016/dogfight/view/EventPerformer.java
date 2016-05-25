@@ -21,51 +21,46 @@ public class EventPerformer implements IEventPerformer{
 
     private UserOrder keyCodeToUserOrder(int keyCode){
         UserOrder userOrder;
-        Order order = Order.DOWN;
 
-        switch (new Order) {
-            case UP:
-                //new Order();
-                new UserOrder(1, Order.UP);
-        }
         switch (keyCode){
             case KeyEvent.VK_Z :
-                new UserOrder(1,  );
+                userOrder = new UserOrder(1,  Order.UP);
                 break;
             case KeyEvent.VK_Q :
-                new UserOrder(1, Order.LEFT);
+                userOrder = new UserOrder(1, Order.LEFT);
                 break;
             case KeyEvent.VK_S :
-                new UserOrder(1, Order.DOWN);
+                userOrder = new UserOrder(1, Order.DOWN);
                 break;
             case KeyEvent.VK_D :
-                new UserOrder(1, Order.RIGHT);
+                userOrder = new UserOrder(1, Order.RIGHT);
                 break;
             case KeyEvent.VK_BACK_SPACE :
-                new UserOrder(1, Order.SHOOT);
+                userOrder = new UserOrder(1, Order.SHOOT);
                 break;
             case KeyEvent.VK_5 :
-                new UserOrder(2, Order.UP);
+                userOrder = new UserOrder(2, Order.UP);
                 break;
             case KeyEvent.VK_1 :
-                new UserOrder(2, Order.LEFT);
+                userOrder = new UserOrder(2, Order.LEFT);
                 break;
             case KeyEvent.VK_2 :
-                new UserOrder(2, Order.DOWN);
+                userOrder = new UserOrder(2, Order.DOWN);
                 break;
             case KeyEvent.VK_3 :
-                new UserOrder(2, Order.RIGHT);
+                userOrder = new UserOrder(2, Order.RIGHT);
                 break;
             case KeyEvent.VK_NUMPAD0 :
-                new UserOrder(2, Order.SHOOT);
+                userOrder = new UserOrder(2, Order.SHOOT);
                 break;
+            default:
+                userOrder = new UserOrder(0, Order.NOP);
         }
-        return
+        return userOrder;
     }
 
     @Override
     public void eventPerform(KeyEvent keyCode) {
-
-        return null;
+        UserOrder userOrder = keyCodeToUserOrder(keyCode.getKeyCode());
     }
 }
