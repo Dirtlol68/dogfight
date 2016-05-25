@@ -20,42 +20,46 @@ public class EventPerformer implements IEventPerformer{
     }
 
     private UserOrder keyCodeToUserOrder(int keyCode){
+        UserOrder userOrder;
         switch (keyCode){
             case 122 :
-                UserOrder u1u = new UserOrder(1, Order.UP);
+                userOrder = new UserOrder(1, Order.UP);
                 break;
             case 113 :
-                UserOrder u1l = new UserOrder(1, Order.LEFT);
+                userOrder = new UserOrder(1, Order.LEFT);
                 break;
             case 115 :
-                UserOrder u1d = new UserOrder(1, Order.DOWN);
+                userOrder = new UserOrder(1, Order.DOWN);
                 break;
             case 100 :
-                UserOrder u1r = new UserOrder(1, Order.RIGHT);
+                userOrder = new UserOrder(1, Order.RIGHT);
                 break;
             case 32 :
-                UserOrder u1s = new UserOrder(1, Order.SHOOT);
+                userOrder = new UserOrder(1, Order.SHOOT);
                 break;
             case 53 :
-                UserOrder u2u = new UserOrder(2, Order.UP);
+                userOrder = new UserOrder(2, Order.UP);
                 break;
             case 49 :
-                UserOrder u2l = new UserOrder(2, Order.LEFT);
+                userOrder = new UserOrder(2, Order.LEFT);
                 break;
             case 50 :
-                UserOrder u2d = new UserOrder(2, Order.DOWN);
+                userOrder = new UserOrder(2, Order.DOWN);
                 break;
             case 51 :
-                UserOrder u2r = new UserOrder(2, Order.RIGHT);
+                userOrder = new UserOrder(2, Order.RIGHT);
                 break;
             case 48 :
-                UserOrder u2s = new UserOrder(2, Order.SHOOT);
+                userOrder = new UserOrder(2, Order.SHOOT);
                 break;
+            default:
+                userOrder = new UserOrder(0, Order.NOP);
         }
+        return userOrder;
     }
 
     @Override
     public void eventPerform(KeyEvent keyCode) {
-
+        UserOrder userOrder = keyCodeToUserOrder(keyCode.getKeyCode());
     }
 }
