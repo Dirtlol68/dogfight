@@ -24,7 +24,28 @@ public class GraphicsBuilder implements IGraphicsBuilder {
     }
 
     private void drawMobile(IMobile mobile, Graphics graphics, ImageObserver observer){
-
+        final BufferedImage imageMobile = new BufferedImage(mobile.getWidth(), mobile.getHeight(), Transparency.TRANSLUCENT);
+        final Graphics graphicsMobile = imageMobile.getGraphics();
+        graphicsMobile.drawImage(mobile.getImage(), 0, 0, mobile.getWidth(), mobile.getHeight(), observer);
+        graphics.drawImage(imageMobile, (int) mobile.getPosition().getX(), (int) mobile.getPosition().getY(), observer);
+        final boolean isHorizontalOut = (mobile.getPosition().getX() + mobile.getWidth()) > this.dogfightModel.getArea().getWidth();
+        final boolean isVerticalOut = (mobile.getPosition().getY() + mobile.getHeight()) > this.dogfightModel.getArea().getHeight();
+        if (isHorizontalOut) {
+            final BufferedImage imageMobileH = imageMobile.getSubimage(this.dogfightModel.getArea().getWidth() - mobile.getPosition().getX(), 0,
+                            (mobile.getWidth() - this.dogfightModel.getArea().getWidth()) + mobile.getPosition().getX(), mobile.getHeight());
+            graphics.drawImage(imageMobileH, 0, (int) mobile.getPosition().getY(), observer);
+        }
+        if (isVerticalOut) {
+            final BufferedImage imageMobileV = imageMobile.getSubimage(0, this.dogfightModel.getArea().getHeight() - mobile.getPosition().getY(), mobile.getWidth(),
+                    (mobile.getHeight() - this.dogfightModel.getArea().getHeight()) + mobile.getPosition().getY());
+            graphics.drawImage(imageMobileV, (int) mobile.getPosition().getX(), 0, observer);
+        }
+        if (isHorizontalOut && isVerticalOut) {
+            final BufferedImage imageMobileHV = imageMobile.getSubimage(this.dogfightModel.getArea().getWidth() - mobile.getPosition().getX(),
+                    this.dogfightModel.getArea().getHeight() - mobile.getPosition().getY(), (mobile.getWidth() - this.dogfightModel.getArea().getWidth())
+                            + mobile.getPosition().getX(), (mobile.getHeight() - this.dogfightModel.getArea().getHeight()) + mobile.getPosition().getY());
+            graphics.drawImage(imageMobileHV, 0, 0, observer);
+        }
     }
 
     @Override
