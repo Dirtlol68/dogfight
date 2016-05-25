@@ -14,19 +14,23 @@ public class Plane extends Mobile{
 
 
     public Plane (int player, Direction direction, Position position, String image){
-        super(direction, new Position(0,0,0,0), new Dimension(WIDTH, HEIGHT), SPEED, image);
+        super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, image);
         this.player = player;
     }
 
-
+    /*
+    Au cas ou isPlayer c'est fait ;)
+     */
     @Override
     public boolean isPlayer(int player) {
-        return super.isPlayer(player);
+        if(this.player == player)
+            return true;
+        return false;
     }
 
     @Override
     public boolean hit() {
-        return super.hit();
+        return true;
     }
 
 

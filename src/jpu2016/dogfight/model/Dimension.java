@@ -11,11 +11,15 @@ public class Dimension {
 
 
     public Dimension(int width, int height){
+        this.width = width;
+        this.height = height;
 
     }
 
     public Dimension(Dimension dimension){
 
+        this.height = dimension.height;
+        this.width = dimension.width;
     }
 
     public int getWidth() {

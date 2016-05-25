@@ -15,26 +15,37 @@ public class Missile extends Mobile {
     private int distanceTraveled = 0;
 
 
-    public Missile(Direction direction, Dimension dimension) {
-        super(direction, new Position(0,0,0,0), dimension, SPEED, IMAGE);
+    public Missile(Direction direction, Position Position) {
+        super(direction, Position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
+
 
     }
 
 
     public static int getHeightADirection(Direction direction){
 
-        return 1;
+        if (direction == Direction.UP || direction == Direction.DOWN)
+            return WIDTH;
+        else
+            return HEIGHT;
     }
 
     public static int getWidthADirection(Direction direction){
 
-        return 1;
+        if (direction == Direction.UP || direction == Direction.DOWN)
+            return HEIGHT;
+        else
+            return WIDTH;
     }
 
    //rajouter deux méthodes static
     @Override
     public void move() {
         super.move();
+        this.distanceTraveled += SPEED;
+        if(this.distanceTraveled >= MAX_DISTANCE_TRAVALED)
+            getDogfightModel().removeMobile(this);
+
     }
 
     @Override

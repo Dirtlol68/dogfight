@@ -13,10 +13,19 @@ public class Position {
 
     public Position(double x, double y, double maxX, double maxY){
 
+        this.x = x;
+        this.y = y;
+        this.maxX = maxX;
+        this.maxY = maxX;
 
     }
 
     public Position (Position position){
+
+       this.x = position.getX();
+        this.y = position.getX();
+        this.maxX = position.getX();
+        this.maxY = position.getX();
 
     }
 
@@ -29,7 +38,13 @@ public class Position {
     }
 
     public void setX(double x) {
-        this.x = x;
+        if(x > this.maxX)
+            this.x = 0;
+        else if (x < 0)
+            this.x = maxX;
+        else
+            this.x = x;
+
     }
 
     public void setY(double y) {

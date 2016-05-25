@@ -8,10 +8,10 @@ import java.util.Observer;
 /**
  * Created by Ahmed on 23/05/2016.
  */
-public class GamePanel implements Observer {
-
+public class GamePanel extends JPanel implements Observer {
+    private IGraphicsBuilder graphicsBuilder;
     public GamePanel(IGraphicsBuilder graphicsBuilder){
-
+        this.graphicsBuilder = graphicsBuilder;
     }
 
     public void paintComponent(Graphics graphics){
@@ -20,6 +20,6 @@ public class GamePanel implements Observer {
 
     @Override
     public void update(Observable o, Object arg) {
-
+        this.repaint();//???????
     }
 }
