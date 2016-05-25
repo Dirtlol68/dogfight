@@ -37,12 +37,12 @@ public class Mobile implements IMobile {
 
     @Override
     public Position getPosition() {
-        return position;
+        return this.position;
     }
 
     @Override
     public Dimension getDimension() {
-        return dimension1;
+        return this.dimension1;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Mobile implements IMobile {
 
     @Override
     public Image getImage() {
-        return null;
+        return this.image4;
     }
 
     @Override
@@ -105,6 +105,8 @@ vont se promener un peu n’importe où.
     @Override
     public void setDogfightModel(DogfightModel dogfightModel) {
 
+        position.setMaxX(800.00);
+        position.setMaxY(500.00);
     }
 
     @Override
