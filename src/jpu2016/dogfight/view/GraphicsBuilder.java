@@ -24,6 +24,9 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
     }
     private void buildEmptySky(){
+        //this.emptySky = new BufferedImage(dogfightModel.getArea().getDimension().getWidth(),dogfightModel.getArea().getDimension().getHeight(),Transparency.TRANSLUCENT);
+        //this.emptySky = new BufferedImage(400,400,Transparency.OPAQUE);
+
 
     }
 
@@ -33,6 +36,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
         final Graphics graphicsMobile = imageMobile.getGraphics();
         graphicsMobile.drawImage(mobile.getImage(), 0, 0, mobile.getWidth(), mobile.getHeight(), observer);
         graphics.drawImage(imageMobile, (int) mobile.getPosition().getX(), (int) mobile.getPosition().getY(), observer);
+        System.out.println("LALALALAL : " + this.dogfightModel.getArea());
         final boolean isHorizontalOut = (mobile.getPosition().getX() + mobile.getWidth()) > this.dogfightModel.getArea().getDimension().getWidth();
         final boolean isVerticalOut = (mobile.getPosition().getY() + mobile.getHeight()) > this.dogfightModel.getArea().getDimension().getHeight();
 
@@ -62,6 +66,14 @@ public class GraphicsBuilder implements IGraphicsBuilder {
     public void applyModelToGraphic(Graphics graphics, ImageObserver observer) throws IOException {
         Mobile mobile;
         ArrayList<IMobile> weapon;
+        System.out.println("Je vais imprimer le ciel");
+        final BufferedImage imageMobile = new BufferedImage(dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), Transparency.TRANSLUCENT);
+        final Graphics graphicsMobile = imageMobile.getGraphics();
+        graphicsMobile.drawImage(dogfightModel.getArea().getImage(), 0, 0, dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), observer);
+        graphics.drawImage(imageMobile, 0, 0, observer);
+
+
+
         weapon = dogfightModel.getMobiles();
         for(int i = 0; weapon.size() > i; i++){
             mobile = (Mobile) weapon.toArray()[i];
