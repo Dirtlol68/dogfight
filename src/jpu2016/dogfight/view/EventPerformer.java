@@ -13,10 +13,10 @@ import java.awt.event.KeyEvent;
 public class EventPerformer implements IEventPerformer{
 
     private IOrderPerformer orderPerformer;
-    private UserOrder userOrder;
+
 
     public EventPerformer(IOrderPerformer orderPerformer){
-
+    this.orderPerformer=keyCodeToUserOrder();
     }
 
     private UserOrder keyCodeToUserOrder(int keyCode){
