@@ -13,53 +13,59 @@ import java.awt.event.KeyEvent;
 public class EventPerformer implements IEventPerformer{
 
     private IOrderPerformer orderPerformer;
-    private UserOrder userOrder;
+    private IEventPerformer eventPerformer;
 
     public EventPerformer(IOrderPerformer orderPerformer){
-
+        this.orderPerformer = orderPerformer;
     }
 
     private UserOrder keyCodeToUserOrder(int keyCode){
         UserOrder userOrder;
-        switch (keyCode){
-            case 122 :
-                userOrder = new UserOrder(1, Order.UP);
-                break;
-            case 113 :
-                userOrder = new UserOrder(1, Order.LEFT);
-                break;
-            case 115 :
-                userOrder = new UserOrder(1, Order.DOWN);
-                break;
-            case 100 :
-                userOrder = new UserOrder(1, Order.RIGHT);
-                break;
-            case 32 :
-                userOrder = new UserOrder(1, Order.SHOOT);
-                break;
-            case 53 :
-                userOrder = new UserOrder(2, Order.UP);
-                break;
-            case 49 :
-                userOrder = new UserOrder(2, Order.LEFT);
-                break;
-            case 50 :
-                userOrder = new UserOrder(2, Order.DOWN);
-                break;
-            case 51 :
-                userOrder = new UserOrder(2, Order.RIGHT);
-                break;
-            case 48 :
-                userOrder = new UserOrder(2, Order.SHOOT);
-                break;
-            default:
-                userOrder = new UserOrder(0, Order.NOP);
+        Order order = Order.DOWN;
+
+        switch (new Order) {
+            case UP:
+                //new Order();
+                new UserOrder(1, Order.UP);
         }
-        return userOrder;
+        switch (keyCode){
+            case KeyEvent.VK_Z :
+                new UserOrder(1,  );
+                break;
+            case KeyEvent.VK_Q :
+                new UserOrder(1, Order.LEFT);
+                break;
+            case KeyEvent.VK_S :
+                new UserOrder(1, Order.DOWN);
+                break;
+            case KeyEvent.VK_D :
+                new UserOrder(1, Order.RIGHT);
+                break;
+            case KeyEvent.VK_BACK_SPACE :
+                new UserOrder(1, Order.SHOOT);
+                break;
+            case KeyEvent.VK_5 :
+                new UserOrder(2, Order.UP);
+                break;
+            case KeyEvent.VK_1 :
+                new UserOrder(2, Order.LEFT);
+                break;
+            case KeyEvent.VK_2 :
+                new UserOrder(2, Order.DOWN);
+                break;
+            case KeyEvent.VK_3 :
+                new UserOrder(2, Order.RIGHT);
+                break;
+            case KeyEvent.VK_NUMPAD0 :
+                new UserOrder(2, Order.SHOOT);
+                break;
+        }
+        return
     }
 
     @Override
     public void eventPerform(KeyEvent keyCode) {
-        UserOrder userOrder = keyCodeToUserOrder(keyCode.getKeyCode());
+
+        return null;
     }
 }
