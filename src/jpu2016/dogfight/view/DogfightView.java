@@ -5,8 +5,11 @@ import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.gameframe.GameFrame;
 import jpu2016.gameframe.GamePanel;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 import java.util.Observable;
 
 /**
@@ -32,11 +35,14 @@ public class DogfightView implements IViewSystem, Runnable {
         JFrame jFrame = new JFrame("GameOver");
         jFrame.setTitle("GameOver");
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        jFrame.setResizable(false);
+        jFrame.setResizable(true);
         jFrame.setVisible(true);
         jFrame.setSize(200, 200);
+        //jFrame.setBackground(Color.white);
         GamePanel gamePanel = new GamePanel(graphicsBuilder);
-
+        JLabel image = new JLabel(new ImageIcon("Image/wasted.png"));
+        gamePanel.add(image);
+        jFrame.setContentPane(gamePanel);
         return message;
     }
 
