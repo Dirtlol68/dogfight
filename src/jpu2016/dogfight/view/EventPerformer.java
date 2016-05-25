@@ -25,7 +25,7 @@ public class EventPerformer implements IEventPerformer{
 
         switch (new Order) {
             case UP:
-                new Order();
+                //new Order();
                 new UserOrder(1, Order.UP);
         }
         switch (keyCode){
