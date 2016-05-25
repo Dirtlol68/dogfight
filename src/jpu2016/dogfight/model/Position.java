@@ -48,7 +48,12 @@ public class Position {
     }
 
     public void setY(double y) {
-        this.y = y;
+        if(y > this.maxY)
+            this.y = 0;
+        else if (y < 0)
+            this.y = maxY;
+        else
+            this.y = y;
     }
 
     protected void setMaxX(double maxX) {

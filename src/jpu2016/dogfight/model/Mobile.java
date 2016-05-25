@@ -12,7 +12,7 @@ public class Mobile implements IMobile {
 
     private int speed ;
     private Position position;
-    private Dimension dimension1;
+    private Dimension dimension;
     private DogfightModel dogfightModel;
     private Direction direction;
     private Image image;
@@ -23,7 +23,7 @@ public class Mobile implements IMobile {
     public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) throws IOException {
         this.direction = direction;
         this.position = position;
-        this.dimension1 = dimension;
+        this.dimension = dimension;
         this.speed = speed;
         this.Image += "Image/" + image;
     }
@@ -47,7 +47,7 @@ public class Mobile implements IMobile {
 
     @Override
     public Dimension getDimension() {
-        return this.dimension1;
+        return this.dimension;
     }
 
     @Override
@@ -57,7 +57,7 @@ public class Mobile implements IMobile {
 
     @Override
     public int getHeight() {
-        return getDimension().getWidth();
+        return getDimension().getHeight();
     }
 
     @Override

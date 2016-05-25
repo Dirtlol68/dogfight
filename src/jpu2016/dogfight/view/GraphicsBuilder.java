@@ -66,14 +66,15 @@ public class GraphicsBuilder implements IGraphicsBuilder {
         Mobile mobile;
         ArrayList<IMobile> weapon;
 
-        final BufferedImage imageMobile = new BufferedImage(dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), Transparency.TRANSLUCENT);
-        final Graphics graphicsMobile = imageMobile.getGraphics();
+        BufferedImage imageMobile = new BufferedImage(dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), Transparency.TRANSLUCENT);
+        Graphics graphicsMobile = imageMobile.getGraphics();
         graphicsMobile.drawImage(dogfightModel.getArea().getImage(), 0, 0, dogfightModel.getArea().getDimension().getWidth(), dogfightModel.getArea().getDimension().getHeight(), observer);
         graphics.drawImage(imageMobile, 0, 0, observer);
 
 
-
         weapon = dogfightModel.getMobiles();
+
+
         for(int i = 0; weapon.size() > i; i++){
             mobile = (Mobile) weapon.toArray()[i];
             System.out.println(mobile);

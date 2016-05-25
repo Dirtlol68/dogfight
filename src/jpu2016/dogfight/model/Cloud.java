@@ -11,8 +11,8 @@ Cloud extends Mobile {
 
 
     private static int SPEED  = 4;
-    private static int WIDTH  = 30;
-    private static int HEIGHT  = 10;
+    private static int WIDTH  = 600/2;
+    private static int HEIGHT  = 316/2;
     private static String IMAGE  = "cloud";
 
 

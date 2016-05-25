@@ -18,16 +18,16 @@ public class Dimension {
 
     public Dimension(Dimension dimension){
 
-        this.height = dimension.height;
-        this.width = dimension.width;
+        this.height = dimension.getHeight();
+        this.width = dimension.getWidth();
     }
 
     public int getWidth() {
-        return width;
+        return this.width;
     }
 
     public int getHeight() {
-        return height;
+        return this.height;
     }
 
     public void setWidth(int width) {

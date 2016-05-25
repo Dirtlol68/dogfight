@@ -9,8 +9,8 @@ import java.io.IOException;
 public class Missile extends Mobile {
 
     private static int SPEED  = 4;
-    private static int WIDTH  = 30;
-    private static int HEIGHT  = 10;
+    private static int WIDTH  = 50;
+    private static int HEIGHT  = 13;
     private static int MAX_DISTANCE_TRAVALED  = 1400;
     private static String IMAGE  = "missile";
     private int distanceTraveled = 0;
