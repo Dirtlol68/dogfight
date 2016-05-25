@@ -33,7 +33,6 @@ public class Sky implements IArea{
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("Voici le chemin du ciel : Image/sky.png" );
         return image;
     }
 }

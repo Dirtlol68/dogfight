@@ -13,7 +13,7 @@ Cloud extends Mobile {
     private static int SPEED  = 4;
     private static int WIDTH  = 30;
     private static int HEIGHT  = 10;
-    private static String IMAGE  = "missile";
+    private static String IMAGE  = "cloud";
 
 
     public Cloud(Direction direction, Position position) throws IOException {
