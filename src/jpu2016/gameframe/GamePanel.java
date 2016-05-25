@@ -4,6 +4,8 @@ import jpu2016.dogfight.controller.DogfightController;
 
 import javax.swing.JPanel;
 import java.awt.*;
+import java.awt.image.ImageObserver;
+import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -18,7 +20,11 @@ public class GamePanel extends JPanel implements Observer {
     }
 
     public void paintComponent(Graphics graphics){
-
+        try {
+            graphicsBuilder.applyModelToGraphic(graphics, null);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
