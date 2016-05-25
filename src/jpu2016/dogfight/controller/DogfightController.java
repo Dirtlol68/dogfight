@@ -3,6 +3,7 @@ package jpu2016.dogfight.controller;
 import jpu2016.dogfight.model.*;
 import jpu2016.dogfight.view.IViewSystem;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public class DogfightController implements IOrderPerformer{
     sur les éléments du modèles (plane.setDirection()).
      */
     @Override
-    public void orderPerform(UserOrder userOrder){
+    public void orderPerform(UserOrder userOrder) throws IOException {
         IMobile plane = dogfightModel.getMobileByPlayer(userOrder.getPlayer());
         switch (userOrder.getOrder()){
             case SHOOT:
@@ -54,7 +55,7 @@ public class DogfightController implements IOrderPerformer{
     Méthode appelant gameLoop() et affiche un message (via l'interface
     IViewSystem fournie par la vue de fin de partie.
      */
-    public void play() throws InterruptedException {
+    public void play() throws InterruptedException, IOException {
         gameLoop();
         System.out.println("Fin de partie"); // A afficher sur l'écran.
     }
@@ -70,7 +71,7 @@ public class DogfightController implements IOrderPerformer{
     Attention à ne pas le créé dessus sinon boom. Il faut donc gérer
     la direction de l'avion pour savoir ou créer le missile.
      */
-    private void launchMissile (int player){
+    private void launchMissile (int player) throws IOException {
         IMobile plane = dogfightModel.getMobileByPlayer(player);
         /*
         Position de l'avion non pas par rapport au centre mais par rapport au coin haut gauche
@@ -106,7 +107,7 @@ public class DogfightController implements IOrderPerformer{
     la mort d'un avion. Elle lance la méthode move() sur chacun des
     mobiles présents.
      */
-    private void gameLoop() throws InterruptedException {
+    private void gameLoop() throws InterruptedException, IOException {
         ArrayList<IMobile> mobiles = new ArrayList<IMobile>();
         IMobile actualMobile;
         launchMissile(1);
@@ -186,7 +187,7 @@ public class DogfightController implements IOrderPerformer{
     isWeaponOnMobile) et de détruire le missile ainsi que de prévenir
     l'avion en fonction du résultat.
      */
-    private void manageCollision(){
+    private void manageCollision() throws IOException {
 
         IMobile plane1 = dogfightModel.getMobileByPlayer(1);
         IMobile plane2 = dogfightModel.getMobileByPlayer(2);

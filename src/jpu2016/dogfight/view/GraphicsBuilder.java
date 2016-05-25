@@ -2,11 +2,14 @@ package jpu2016.dogfight.view;
 
 import jpu2016.dogfight.model.IDogfightModel;
 import jpu2016.dogfight.model.IMobile;
+import jpu2016.dogfight.model.Mobile;
 import jpu2016.gameframe.IGraphicsBuilder;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
+import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  * Created by Ahmed on 23/05/2016.
@@ -24,7 +27,8 @@ public class GraphicsBuilder implements IGraphicsBuilder {
 
     }
 
-    private void drawMobile(IMobile mobile, Graphics graphics, ImageObserver observer){
+    private void drawMobile(IMobile mobile, Graphics graphics, ImageObserver observer) throws IOException {
+
         final BufferedImage imageMobile = new BufferedImage(mobile.getWidth(), mobile.getHeight(), Transparency.TRANSLUCENT);
         final Graphics graphicsMobile = imageMobile.getGraphics();
         graphicsMobile.drawImage(mobile.getImage(), 0, 0, mobile.getWidth(), mobile.getHeight(), observer);
@@ -55,9 +59,14 @@ public class GraphicsBuilder implements IGraphicsBuilder {
     chacun la méthode drawMobile().
      */
     @Override
-    public void applyModelToGraphic(Graphics graphics, ImageObserver observer) {
-       // Mobile mobile;
-        //drawMobile(mobile,graphics, observer);
+    public void applyModelToGraphic(Graphics graphics, ImageObserver observer) throws IOException {
+        Mobile mobile;
+        ArrayList<IMobile> weapon;
+        weapon = dogfightModel.getMobiles();
+        for(int i = 0; weapon.size() > i; i++){
+            mobile = (Mobile) weapon.toArray()[i];
+            drawMobile(mobile, graphics,observer);
+        }
     }
 
     @Override

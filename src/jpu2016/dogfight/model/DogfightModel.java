@@ -2,6 +2,7 @@ package jpu2016.dogfight.model;
 
 import sun.net.www.content.text.plain;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -49,7 +50,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
     }
 
     @Override
-    public IMobile getMobileByPlayer(int player) {
+    public IMobile getMobileByPlayer(int player) throws IOException {
         Plane plane;
 
         for (int i = 0; mobiles.size() > i;i++){

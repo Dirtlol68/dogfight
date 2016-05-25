@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.*;
+import java.io.IOException;
 
 /**
  * Created by Clemsouille on 23/05/2016.
@@ -15,7 +16,7 @@ Cloud extends Mobile {
     private static String IMAGE  = "missile";
 
 
-    public Cloud(Direction direction, Position position) {
+    public Cloud(Direction direction, Position position) throws IOException {
         super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 
     }

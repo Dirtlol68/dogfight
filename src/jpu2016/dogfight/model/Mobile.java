@@ -1,6 +1,9 @@
 package jpu2016.dogfight.model;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * Created by Clemsouille on 23/05/2016.
@@ -12,15 +15,17 @@ public class Mobile implements IMobile {
     private Dimension dimension1;
     private DogfightModel dogfightModel;
     private Direction direction;
-    private Image image4;
+    private Image image;
+    private String Image ="";
 
 
-    public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) {
+
+    public Mobile(Direction direction, Position position, Dimension dimension, int speed, String image) throws IOException {
         this.direction = direction;
         this.position = position;
         this.dimension1 = dimension;
         this.speed = speed;
-        //this.image4 = ;
+        this.Image += "Image/" + image;
     }
 
 
@@ -57,12 +62,15 @@ public class Mobile implements IMobile {
 
     @Override
     public int getSpeed() {
+
         return this.speed;
     }
 
     @Override
-    public Image getImage() {
-        return this.image4;
+    public Image getImage() throws IOException {
+        this.Image += getDirection();
+        this.image = ImageIO.read(new File(this.Image));
+        return this.image;
     }
 
     @Override
@@ -118,7 +126,7 @@ vont se promener un peu n’importe où.
     isWeapon fonctionne !!
      */
     @Override
-    public boolean isWeapon() {
+    public boolean isWeapon() throws IOException {
         if(this.getClass().isInstance(new Missile(Direction.UP, new Position(0,0,0,0))))
             return true;
         return false;

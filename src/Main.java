@@ -2,6 +2,8 @@ import jpu2016.dogfight.controller.DogfightController;
 import jpu2016.dogfight.model.*;
 import jpu2016.dogfight.view.DogfightView;
 
+import java.io.IOException;
+
 public class Main {
     /*
     L’ordre dans lequel vous le ferez aura une incidence sur le jeu.
@@ -12,7 +14,7 @@ public class Main {
     seront eux toujours devant. Si ce n’est pas le cas, c’est que la vue a dans
     sa boucle d’affichage commencé par la fin et mobiles.
      */
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) throws InterruptedException, IOException {
         int HEIGHT = 600, WIDTH = 600;
         final DogfightModel dogfightModel = new DogfightModel();
         Sky sky = new Sky(new Dimension(HEIGHT,WIDTH));

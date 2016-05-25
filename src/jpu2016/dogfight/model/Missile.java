@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.*;
+import java.io.IOException;
 
 /**
  * Created by Clemsouille on 23/05/2016.
@@ -15,7 +16,7 @@ public class Missile extends Mobile {
     private int distanceTraveled = 0;
 
 
-    public Missile(Direction direction, Position Position) {
+    public Missile(Direction direction, Position Position) throws IOException {
         super(direction, Position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 
 
@@ -49,7 +50,7 @@ public class Missile extends Mobile {
     }
 
     @Override
-    public boolean isWeapon() {
+    public boolean isWeapon() throws IOException {
         return super.isWeapon();
     }
 

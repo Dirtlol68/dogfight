@@ -11,6 +11,7 @@ import java.util.Observer;
 public class GamePanel extends JPanel implements Observer {
     private IGraphicsBuilder graphicsBuilder;
     public GamePanel(IGraphicsBuilder graphicsBuilder){
+
         this.graphicsBuilder = graphicsBuilder;
     }
 

@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.*;
+import java.io.IOException;
 
 /**
  * Created by Clemsouille on 23/05/2016.
@@ -13,7 +14,7 @@ public class Plane extends Mobile{
     private int player ;
 
 
-    public Plane (int player, Direction direction, Position position, String image){
+    public Plane (int player, Direction direction, Position position, String image) throws IOException {
         super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, image);
         this.player = player;
     }

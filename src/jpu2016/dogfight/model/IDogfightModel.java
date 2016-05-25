@@ -1,6 +1,7 @@
 package jpu2016.dogfight.model;
 
 import java.awt.*;
+import java.io.IOException;
 import java.util.ArrayList;
 
 
@@ -14,7 +15,7 @@ public interface IDogfightModel {
     public void addMobile (IMobile mobile);
     public void removeMobile (IMobile mobile);
     public ArrayList<IMobile > getMobiles ();
-    public IMobile getMobileByPlayer(int player);
+    public IMobile getMobileByPlayer(int player) throws IOException;
     public void setMobilesHavesMoved();
 
 
