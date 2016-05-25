@@ -68,8 +68,10 @@ public class Mobile implements IMobile {
 
     @Override
     public Image getImage() throws IOException {
-        this.Image += getDirection();
+        this.Image += "_"+getDirection()+".png";
+        System.out.println("Chemin image : " + Image);
         this.image = ImageIO.read(new File(this.Image));
+        System.out.println("Coucou");
         return this.image;
     }
 

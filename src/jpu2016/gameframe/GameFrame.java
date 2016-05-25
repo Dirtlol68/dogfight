@@ -6,6 +6,7 @@ import jpu2016.dogfight.view.EventPerformer;
 import javax.swing.JFrame;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.io.IOException;
 import java.util.Observable;
 
 
@@ -29,6 +30,11 @@ public class GameFrame extends JFrame implements KeyListener{
         GamePanel gamePanel = new GamePanel(graphicsBuilder);
         this.setContentPane(gamePanel);
         observable.addObserver(gamePanel);
+        try {
+            graphicsBuilder.applyModelToGraphic(getGraphics(), gamePanel);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     /*public void setDogfightView(DogfightView dogfightView){
@@ -46,6 +52,7 @@ public class GameFrame extends JFrame implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
+
         this.eventPerformer.eventPerform(keyEvent);
     }
 

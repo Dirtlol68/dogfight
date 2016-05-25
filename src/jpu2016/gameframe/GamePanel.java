@@ -1,5 +1,7 @@
 package jpu2016.gameframe;
 
+import jpu2016.dogfight.controller.DogfightController;
+
 import javax.swing.JPanel;
 import java.awt.*;
 import java.util.Observable;
