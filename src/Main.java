@@ -12,7 +12,7 @@ public class Main {
     seront eux toujours devant. Si ce n’est pas le cas, c’est que la vue a dans
     sa boucle d’affichage commencé par la fin et mobiles.
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int HEIGHT = 600, WIDTH = 600;
         final DogfightModel dogfightModel = new DogfightModel();
         Sky sky = new Sky(new Dimension(HEIGHT,WIDTH));

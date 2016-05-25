@@ -57,7 +57,7 @@ public class Mobile implements IMobile {
 
     @Override
     public int getSpeed() {
-        return 0;
+        return this.speed;
     }
 
     @Override
@@ -125,19 +125,19 @@ vont se promener un peu n’importe où.
     }
 
     private void moveUp(){
-        this.position.setY(this.getPosition().getY() - 1);
+        this.position.setY(this.getPosition().getY() - this.getSpeed());
     }
 
     private void moveRight(){
-        this.position.setX(this.getPosition().getX() + 1);
+        this.position.setX(this.getPosition().getX() + this.getSpeed());
     }
 
     private void moveDown(){
-        this.position.setY(this.getPosition().getY() + 1);
+        this.position.setY(this.getPosition().getY() + this.getSpeed());
     }
 
     private void moveLeft(){
-        this.position.setX(this.getPosition().getX() + 1);
+        this.position.setX(this.getPosition().getX() + this.getSpeed());
     }
 
     public Color getColor(){

@@ -42,7 +42,10 @@ public class Missile extends Mobile {
     @Override
     public void move() {
         super.move();
-        this.distanceTraveled++;
+        this.distanceTraveled += SPEED;
+        if(this.distanceTraveled >= MAX_DISTANCE_TRAVALED)
+            getDogfightModel().removeMobile(this);
+
     }
 
     @Override
