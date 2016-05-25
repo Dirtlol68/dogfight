@@ -37,7 +37,7 @@ public class Mobile implements IMobile {
 
     @Override
     public void setDirection(Direction direction) {
-
+        this.direction = direction;
     }
 
     @Override

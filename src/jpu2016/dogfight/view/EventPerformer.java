@@ -36,19 +36,19 @@ public class EventPerformer implements IEventPerformer{
             case KeyEvent.VK_D :
                 userOrder = new UserOrder(1, Order.RIGHT);
                 break;
-            case KeyEvent.VK_BACK_SPACE :
+            case KeyEvent.VK_SPACE :
                 userOrder = new UserOrder(1, Order.SHOOT);
                 break;
-            case KeyEvent.VK_5 :
+            case KeyEvent.VK_NUMPAD5 :
                 userOrder = new UserOrder(2, Order.UP);
                 break;
-            case KeyEvent.VK_1 :
+            case KeyEvent.VK_NUMPAD1 :
                 userOrder = new UserOrder(2, Order.LEFT);
                 break;
-            case KeyEvent.VK_2 :
+            case KeyEvent.VK_NUMPAD2 :
                 userOrder = new UserOrder(2, Order.DOWN);
                 break;
-            case KeyEvent.VK_3 :
+            case KeyEvent.VK_NUMPAD3 :
                 userOrder = new UserOrder(2, Order.RIGHT);
                 break;
             case KeyEvent.VK_NUMPAD0 :
@@ -62,10 +62,8 @@ public class EventPerformer implements IEventPerformer{
 
     @Override
     public void eventPerform(KeyEvent keyCode) {
-
         UserOrder userOrder = keyCodeToUserOrder(keyCode.getKeyCode());
         try {
-            System.out.println("ORDRE !");
             this.orderPerformer.orderPerform(userOrder);
         } catch (IOException e) {
             e.printStackTrace();

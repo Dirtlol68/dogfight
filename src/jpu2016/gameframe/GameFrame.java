@@ -35,6 +35,7 @@ public class GameFrame extends JFrame implements KeyListener{
         } catch (IOException e) {
             e.printStackTrace();
         }
+        addKeyListener(this);
     }
 
     /*public void setDogfightView(DogfightView dogfightView){
@@ -52,12 +53,10 @@ public class GameFrame extends JFrame implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent keyEvent) {
-
         this.eventPerformer.eventPerform(keyEvent);
     }
 
     @Override
     public void keyReleased(KeyEvent e) {
-
     }
 }

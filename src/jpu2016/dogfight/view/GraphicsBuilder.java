@@ -23,6 +23,7 @@ public class GraphicsBuilder implements IGraphicsBuilder {
         this.dogfightModel = dogfightModel;
 
     }
+
     private void buildEmptySky(){
         //this.emptySky = new BufferedImage(dogfightModel.getArea().getDimension().getWidth(),dogfightModel.getArea().getDimension().getHeight(),Transparency.TRANSLUCENT);
         //this.emptySky = new BufferedImage(400,400,Transparency.OPAQUE);
