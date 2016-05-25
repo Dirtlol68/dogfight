@@ -17,6 +17,7 @@ public class EventPerformer implements IEventPerformer{
 
     public EventPerformer(IOrderPerformer orderPerformer){
     this.orderPerformer=keyCodeToUserOrder();
+        
     }
 
     private UserOrder keyCodeToUserOrder(int keyCode){
