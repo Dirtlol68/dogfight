@@ -187,7 +187,7 @@ public class DogfightController implements IOrderPerformer{
     isWeaponOnMobile) et de détruire le missile ainsi que de prévenir
     l'avion en fonction du résultat.
      */
-    private void manageCollision() throws IOException {
+    private void manageCollision() throws IOException, InterruptedException {
 
         IMobile plane1 = dogfightModel.getMobileByPlayer(1);
         IMobile plane2 = dogfightModel.getMobileByPlayer(2);
@@ -214,6 +214,8 @@ public class DogfightController implements IOrderPerformer{
                     weapon.remove(plane2);
                 }
                 //System.out.println(weapon);
+                Thread.sleep(TIME_SLEEP);
+                dogfightModel.setMobilesHavesMoved();
             }
         }
 

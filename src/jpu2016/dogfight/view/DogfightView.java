@@ -35,6 +35,5 @@ public class DogfightView implements IViewSystem, Runnable {
 
     @Override
     public void run() {
-
     }
 }
